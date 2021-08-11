@@ -1,0 +1,36 @@
+.reina-ui {
+    width: 100%;
+    height: 100%;
+    background-color: #dbe7e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    .dashboard-container {
+        background-color: #f3f2e8;
+        width: calc(100% - 100px);
+        height: calc(100% - 100px);
+        border-radius: 30px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border: 1px solid #f3f2e8;
+            display: block;
+            border-radius: 30px;
+            transform: rotate(-1deg);
+            position: absolute;
+            z-index: -1;
+        }
+        .left-pane,
+        .right-pane {
+            width: 240px;
+        }
+        .main-pane {
+            flex: 1;
+        }
+    }
+}
