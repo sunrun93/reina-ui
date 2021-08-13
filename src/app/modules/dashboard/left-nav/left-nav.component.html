@@ -1,1 +1,6 @@
-<p>left-nav works!</p>
+<ul class='left-nav-menu'>
+    <li *ngFor='let nav of leftNavList'>
+        <span>{{nav.title}}</span>
+        <left-nav *ngIf='nav.children?.length > 0' [leftNavList]='nav.children'></left-nav>
+    </li>
+</ul>

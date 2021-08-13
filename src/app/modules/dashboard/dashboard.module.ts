@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [DashboardComponent, LeftNavComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ]
 })

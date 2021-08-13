@@ -4,7 +4,7 @@
             <img class='avatar' src="../../../assets/images/carton.jpeg" />
             <ul>
                 <li>
-                    <span class="title">Site Owner:</span>Reina Wang
+                    <span class="title">Owner:</span>Reina Wang
                 </li>
                 <li>
                     <span class="title">Job:</span>Web Developer
@@ -15,13 +15,18 @@
             </ul>
         </div>
         <div class='menu-pane'>
-            <left-nav></left-nav>
+            <left-nav [leftNavList]='leftNavList$ | async'></left-nav>
         </div>
     </div>
     <div class='content-pane main-pane'>
         <div class='top-pane'>
             <div class='welcome-pane'>
-                Welcome to Reina's Personal Site.
+                Hey, Welcome to Reina's Zone.
+                <angular-emojis [name]="'clap'" size="30"> </angular-emojis>
+                <span>
+                  <angular-emojis [name]="'star'" size="20"> </angular-emojis>
+                  这里是一句随机的话
+                </span>
             </div>
             <div class='weather-pane'>
                 天气插件

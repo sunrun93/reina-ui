@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { LeftNavItem } from './../models/dashboard.interface';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'left-nav',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftNavComponent implements OnInit {
 
+  @Input() leftNavList: LeftNavItem[];
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,7 @@
+import { Observable } from 'rxjs';
+import { LeftNavItem } from './models/dashboard.interface';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'dashboard',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  leftNavList$: Observable<LeftNavItem[]>;
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.fetchLeftNavList();
+  }
+
+  fetchLeftNavList(){
+    this.leftNavList$ = this.http.get('../../../../assets/datas/dashboard/left-nav.json') as Observable<LeftNavItem[]>;
   }
 
 }
