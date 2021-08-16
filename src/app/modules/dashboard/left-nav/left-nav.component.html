@@ -1,6 +1,10 @@
 <ul class='left-nav-menu'>
-    <li *ngFor='let nav of leftNavList'>
-        <span>{{nav.title}}</span>
-        <left-nav *ngIf='nav.children?.length > 0' [leftNavList]='nav.children'></left-nav>
+    <li *ngFor='let nav of leftNavList' class='nav-menu-item'>
+        <span class='menu-title' (click)="nav.extend = !nav.extend">
+          <img class='menu-icon' *ngIf='nav.icon' src='./assets/images/{{nav.icon}}.svg' />
+          <span class='label'>{{nav.title}}</span>
+        <span class='arrow' *ngIf='nav?.children?.length > 0' [class.rotate-arrow]='nav.extend'></span>
+        </span>
+        <left-nav *ngIf='nav.children?.length > 0' [class.show-children]='nav.extend' [leftNavList]='nav.children' class='child-menu'></left-nav>
     </li>
 </ul>

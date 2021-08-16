@@ -1,0 +1,75 @@
+[{
+        "id": "dashboard",
+        "title": "Welocome",
+        "icon": "hi"
+    },
+    {
+        "id": "ui-tools",
+        "title": "前端小组件们",
+        "icon": "post",
+        "children": [{
+                "id": "react-tools",
+                "title": "React 版本"
+            },
+            {
+                "id": "angular-tools",
+                "title": "Angular 版本"
+            },
+            {
+                "id": "vue-tools",
+                "title": "Vue 版本"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "资源分享",
+        "icon": "star",
+        "children": [{
+                "id": "4-1",
+                "title": "电子书"
+            },
+            {
+                "id": "4-2",
+                "title": "私家珍藏"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "title": "学习笔记",
+        "icon": "note",
+        "children": [{
+                "id": "5-1",
+                "title": "前端相关"
+            },
+            {
+                "id": "5-2",
+                "title": "学海无涯"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "小工具合集",
+        "icon": "tool",
+        "children": [{
+                "id": "2-1",
+                "title": "头脑风暴图"
+            },
+            {
+                "id": "2-2",
+                "title": "组织结构图",
+                "children": [{
+                        "id": "2-2-1",
+                        "title": "树形图"
+                    },
+                    {
+                        "id": "2-2-2",
+                        "title": "架构图"
+                    }
+                ]
+            }
+        ]
+    }
+]
