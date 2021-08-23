@@ -9,8 +9,9 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Open app.component.html",
-      "url": "http://localhost:4200"
+      "name": "Open Chrome",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

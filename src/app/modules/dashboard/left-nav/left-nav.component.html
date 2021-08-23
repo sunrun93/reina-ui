@@ -1,5 +1,5 @@
 <ul class='left-nav-menu'>
-    <li *ngFor='let nav of leftNavList' class='nav-menu-item'>
+    <li *ngFor='let nav of leftNavList' class='nav-menu-item' (click)='onNavSelect.emit(nav)'>
         <span class='menu-title' (click)="nav.extend = !nav.extend">
           <img class='menu-icon' *ngIf='nav.icon' src='./assets/images/{{nav.icon}}.svg' />
           <span class='label'>{{nav.title}}</span>

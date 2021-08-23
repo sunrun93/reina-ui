@@ -66,19 +66,19 @@
     .main-pane {
         flex: 1;
         margin: 20px 0 10px;
-        padding: 20px;
+        padding: 20px 20px 5px;
         display: flex;
         flex-direction: column;
         background-image: linear-gradient(#ebf7f4, #fff);
         border-radius: 30px;
         .top-pane {
-            height: 100px;
+            height: 80px;
             display: flex;
             .welcome-pane {
                 flex: 1;
                 border-radius: 20px;
                 font-size: 28px;
-                height: 60px;
+                height: 80px;
                 line-height: 60px;
                 span {
                     display: block;
@@ -96,6 +96,7 @@
             display: flex;
             flex: 1;
             padding: 10px 0;
+            overflow: auto;
         }
     }
 }

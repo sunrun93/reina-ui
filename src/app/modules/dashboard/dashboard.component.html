@@ -15,7 +15,7 @@
             </ul>
         </div>
         <div class='menu-pane'>
-            <left-nav [leftNavList]='leftNavList$ | async'></left-nav>
+            <left-nav [leftNavList]='leftNavList$ | async' (onNavSelect)='onNavSelect($event)'></left-nav>
         </div>
     </div>
     <div class='content-pane main-pane'>
@@ -25,7 +25,7 @@
                 <angular-emojis [name]="'clap'" size="30"> </angular-emojis>
                 <span>
                   <angular-emojis [name]="'star'" size="20"> </angular-emojis>
-                  这里是一句随机的话
+                  随时、随地，准备好，拥抱变化～
                 </span>
             </div>
             <div class='weather-pane'>
@@ -33,7 +33,8 @@
             </div>
         </div>
         <div class='main-content-pane'>
-            瀑布流
+            <!-- 瀑布流 -->
+            <water-fall></water-fall>
         </div>
     </div>
     <div class='content-pane right-pane'>

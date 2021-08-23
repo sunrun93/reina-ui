@@ -21,4 +21,9 @@ export class DashboardComponent implements OnInit {
     this.leftNavList$ = this.http.get('../../../../assets/data/dashboard/left-nav.json') as Observable<LeftNavItem[]>;
   }
 
+  onNavSelect(nav: LeftNavItem){
+    nav;
+    // router change to the new screen
+  }
+
 }

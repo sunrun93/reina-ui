@@ -1,0 +1,5 @@
+<ul class='water-fall' #container>
+    <li class='image-pane' *ngFor='let path of imagePathList; index as i' #imagePane>
+        <img [src]='path' (load)='imageLoaded$.next(i)' />
+    </li>
+</ul>
