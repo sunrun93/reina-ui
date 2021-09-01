@@ -1,0 +1,22 @@
+{
+    "userName": {
+        "title": "UserName",
+        "width": "100%",
+        "required": true
+    },
+    "email": {
+        "title": "Email",
+        "width": "100%",
+        "required": true
+    },
+    "password": {
+        "title": "Password",
+        "width": "100%",
+        "required": true
+    },
+    "confirmPassword": {
+        "title": "Confirm Password",
+        "width": "100%",
+        "required": true
+    }
+}

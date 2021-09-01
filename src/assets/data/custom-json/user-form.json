@@ -1,0 +1,57 @@
+{
+    "formId": {
+        "title": "Form ID",
+        "width": "100%",
+        "readonly": true
+    },
+    "personalInfo": {
+        "title": "Personal Info",
+        "fields": {
+            "firstName": {
+                "title": "First Name",
+                "required": true
+            },
+            "lastName": {
+                "title": "Last Name"
+            },
+            "age": {
+                "type": "number",
+                "title": "Age"
+            },
+            "showAddress": {
+                "type": "checkbox",
+                "title": "Show Address?"
+            }
+        }
+    },
+    "addressInfo": {
+        "fields": {
+            "country": {
+                "type": "select",
+                "title": "Country",
+                "width": "25%",
+                "options": [
+                    "US",
+                    "Canada"
+                ]
+            },
+            "city": {
+                "type": "select",
+                "title": "City",
+                "width": "25%",
+                "options": [
+                    "New York",
+                    "Toronto"
+                ]
+            },
+            "street": {
+                "title": "Street",
+                "width": "25%"
+            },
+            "zip": {
+                "title": "Zip Code",
+                "width": "25%"
+            }
+        }
+    }
+}

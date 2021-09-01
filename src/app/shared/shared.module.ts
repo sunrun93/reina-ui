@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AngularEmojisModule } from 'angular-emojis';
 import { HttpClientModule } from '@angular/common/http';
 import { WaterFallComponent } from './water-fall/water-fall.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 const commonModules = [
@@ -11,15 +13,21 @@ const commonModules = [
   HttpClientModule
 ];
 
+const bootstrapModules = [
+  NgbModule
+];
+
 @NgModule({
   declarations: [
     WaterFallComponent
   ],
   imports: [
-    ...commonModules
+    ...commonModules,
+    ...bootstrapModules
   ],
   exports: [
     ...commonModules,
+    ...bootstrapModules,
     WaterFallComponent
   ]
 })

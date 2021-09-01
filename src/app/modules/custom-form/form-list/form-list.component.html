@@ -1,0 +1,12 @@
+<h5>Form List</h5>
+<div class='form-list-view' *ngIf='formList?.length > 0'>
+    <ul class='form-list'>
+        <li *ngFor="let formItem of formList; index as i" (click)='selectedForm = formItem' [class.active]='selectedForm.formName === formItem.formName'>
+            {{i+1}} - {{formItem.formName}}
+        </li>
+    </ul>
+
+    <div class='form-container'>
+        <form-generator [fields]="selectedForm?.fields"></form-generator>
+    </div>
+</div>

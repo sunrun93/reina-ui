@@ -1,0 +1,51 @@
+:host {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-list-view {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    flex: auto;
+    .form-list {
+        width: 500px;
+        margin: 0;
+        padding: 20px;
+        li {
+            line-height: 36px;
+            height: 36px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            &:hover {
+                background: #c7d8f1;
+            }
+            &.active {
+                color: #0d6efd;
+            }
+        }
+    }
+    .form-container {
+        flex: auto;
+        width: calc(100% - 160px);
+        border-left: 1px solid #eee;
+        padding: 20px;
+        border: 1px solid #eee;
+        // border-radius: 10px;
+        .form-container {
+            flex: auto;
+            padding: 20px;
+            border: 1px solid #eee;
+        }
+        .sub-group {
+            border-radius: 10px;
+            margin: 10px 0px;
+            padding: 10px 10px 15px;
+            border: 1px solid #eee;
+        }
+    }
+}

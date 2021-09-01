@@ -1,0 +1,32 @@
+<div class='custom-form'>
+    <div class='left-json-editor'>
+        <json-editor [options]="editorOptions" [data]="data" (change)="jsonChange$.next($event)"></json-editor>
+
+    </div>
+    <div class='dynamic-form'>
+        <div class='top-bar'>
+            <label class="title">Form Preview</label>
+            <div>
+                <button type="button" class='btn btn-outline-secondary btn-sm' (click)='reset()'>Reset</button>
+                <button type="button" class='btn btn-outline-primary btn-sm' (click)='save(content)'>Save</button>
+            </div>
+        </div>
+        <div class='form-container'>
+            <form-generator [fields]="fields"></form-generator>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Save Form</h4>
+    </div>
+    <div class="modal-body">
+        <span>Form Name</span>
+        <input type="text" class="form-control" [(ngModel)]='formName' />
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Save</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss()">Cancel</button>
+    </div>
+</ng-template>
